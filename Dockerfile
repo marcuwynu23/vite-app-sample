@@ -10,11 +10,13 @@ RUN npm run build
 FROM nginx:alpine
 USER root
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Copy dist to a path not overwritten by Coolify mounts
+COPY --from=builder /app/dist /opt/app/dist
+
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/
 
-# Fix permissions for Nginx temp folders
+# Fix permissions
 RUN mkdir -p /var/cache/nginx/client_temp && \
     chown -R nginx:nginx /var/cache/nginx
 
