@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:wesdevteam/vite-app-sample.git', credentialsId: 'your-ssh-key-id'
+                git branch: 'main', url: 'git@github.com:wesdevteam/vite-app-sample.git'
             }
         }
         stage('Install') {
