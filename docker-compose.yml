@@ -6,5 +6,3 @@ services:
     container_name: vite-app
     ports:
       - "8080:80"
-    restart: unless-stopped
-    - ./nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
