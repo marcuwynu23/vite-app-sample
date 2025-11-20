@@ -1,9 +1,5 @@
 pipeline {
-     agent {
-        docker {
-            image 'appdynamics/nodejs-agent:latest'
-        }
-    }
+    agent any
     stages {
         stage('Checkout') {
             steps {
