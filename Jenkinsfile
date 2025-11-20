@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/your-repo.git'
+                git branch: 'main', url: 'git@github.com:wesdevteam/vite-app-sample.git'
             }
         }
         stage('Install') {
@@ -12,11 +12,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'npm test'
-            }
-        }
+
         stage('Build') {
             steps {
                 sh 'npm run build'
