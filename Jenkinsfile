@@ -3,10 +3,12 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Use the SSH key credential
-                sshagent(['ssh-server-key']) {
-                    git branch: 'main', url: 'git@github.com:wesdevteam/vite-app-sample.git'
-                }
+                // Use SSH key directly
+                sh '''
+                    export HOME=/var/jenkins_home
+                    rm -rf * .git
+                    git clone -b main git@github.com:wesdevteam/vite-app-sample.git .
+                '''
             }
         }
 
