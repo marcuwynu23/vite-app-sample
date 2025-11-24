@@ -3,20 +3,26 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:wesdevteam/vite-app-sample.git'
+                // Use the SSH key credential
+                sshagent(['ssh-server-key']) {
+                    git branch: 'main', url: 'git@github.com:wesdevteam/vite-app-sample.git'
+                }
             }
         }
-         stage('list') {
+
+        stage('List Workspace') {
             steps {
-                sh 'ls'
+                sh 'ls -la'
             }
         }
-        stage('Install') {
+
+        stage('Install Dependencies') {
             steps {
                 sh 'npm install'
             }
         }
-        stage('Build') {
+
+        stage('Build Project') {
             steps {
                 sh 'npm run build'
             }
