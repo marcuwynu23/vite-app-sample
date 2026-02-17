@@ -3,12 +3,11 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Use SSH key directly
-                sh '''
-                    export HOME=/var/jenkins_home
-                    rm -rf * .git
-                    git clone -b main git@github.com:wesdevteam/vite-app-sample.git .
-                '''
+                // Clean workspace completely and use SSH credentials
+                deleteDir() // removes everything, including hidden files
+                sshagent(['ssh-server-key']) { // SSH key credential configured in Jenkins
+                    sh 'git clone -b main git@github.com:wesdevteam/vite-app-sample.git .'
+                }
             }
         }
 
