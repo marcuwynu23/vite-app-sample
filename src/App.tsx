@@ -78,11 +78,6 @@ function App() {
           </ul>
         )}
 
-        <p className="hint">
-          (Note: Vite only exposes variables starting with <code>VITE_</code> to
-          the client. Other variables are not included in the bundle and cannot
-          be accessed from the browser.)
-        </p>
         {viteAppUrl?.trim() && (
           <section className="root-fetch" aria-label="Root fetch result">
             <h2 className="root-fetch-title">GET {viteAppUrl}</h2>
