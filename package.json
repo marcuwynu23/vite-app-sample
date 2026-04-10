@@ -12,6 +12,7 @@
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
+    "@marcuwynu23/vite-plugin-env-banner": "^1.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
