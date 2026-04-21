@@ -1,5 +1,5 @@
 # Stage 1: Build the Vite app
-FROM node:20-alpine AS builder
+FROM node:22-alpine3.22 AS builder
 RUN apk upgrade --no-cache
 WORKDIR /app
 COPY package*.json ./
@@ -8,7 +8,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Serve with Nginx
-FROM nginx:alpine
+FROM nginx:stable-alpine3.22
 USER root
 RUN apk upgrade --no-cache
 
