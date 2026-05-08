@@ -1,10 +1,10 @@
 <div align="center">
 
-# vite-react-app-sample
+# vite-react-app-boilerplate
 
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
 
-A modern web application built with [Vite](https://vitejs.dev/), a next-generation frontend build tool.
+A modern web application boilerplate built with [Vite](https://vitejs.dev/), a next-generation frontend build tool.
 
 </div>
 
