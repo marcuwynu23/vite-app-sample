@@ -1,19 +1,24 @@
+<div align="center">
 
-# vite-app-sample
+# vite-react-app-sample
+
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
 
 A modern web application built with [Vite](https://vitejs.dev/), a next-generation frontend build tool.
 
+</div>
+
 ## Features
 
-- ⚡ Lightning-fast development server with Hot Module Replacement (HMR)
-- 📦 Optimized production builds
-- 🔧 Framework-agnostic and extensible
+- Lightning-fast development server with Hot Module Replacement (HMR)
+- Optimized production builds
+- Framework-agnostic and extensible
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 14+ 
+- Node.js 14+
 - npm or yarn
 
 ### Installation
